@@ -1,0 +1,590 @@
+.App{
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgb(126, 190, 157) 0%, rgb(37, 164, 168) 42%);
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  
+}
+/* Auth Components styling */
+
+
+.auth-form-container, .login-form, .register-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form-container{
+  padding: 5rem;
+  border: 1px solid white;
+  margin: 0.5rem;
+
+}
+
+.auth-form-container label{
+  text-align: left;
+  padding: 0.25rem 0;
+}
+
+.auth-form-container input {
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+   
+}
+
+.auth-btn {
+  border: none;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  color:rgb(126, 190, 157) ;
+}
+
+.link-btn{
+  background:none;
+  color: white;
+  text-decoration: underline;
+  border: none;
+  margin: 5%;
+}
+
+
+
+
+/* Navigation Bar Styling */
+body{
+  margin:0;
+}
+.headerContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  background-color: rgb(	3, 37, 65);
+  z-index: 1;
+  height: 64px;
+  width: 100%;
+}
+
+.headerContent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navWrapper{
+  display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow: visible;
+}
+
+.flex{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.subMedia{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 40px;
+  padding-left: 150px;
+}
+
+.logo {
+   display: block;
+    margin-right: 16px;
+    width: 154px;
+    height: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+li {
+  float: left;
+  margin-right: 50px;
+}
+
+
+.transStyle{
+  border: 0.5px solid white;
+  padding: 4px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+}
+
+
+.searchIconStyle{
+color: white;
+margin-top: 10%;
+padding: 12px;
+background-image: url('https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-28-search-blue-177462d06db81ff2a02aa022c1c0be5ba4200d7bd3f51091ed9298980e3a26a1.svg');
+
+}
+
+.watchListTab{
+  color: white;
+    margin-top: 7%;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(	3, 37, 65);
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+
+}
+
+.watchListTab:hover{
+  color: rgb(209, 208, 208);
+}
+
+.primary{
+  justify-content: center;
+  align-items: center;
+  margin-top: 6%;
+  margin-right: 70px;
+
+}
+ /* ----------------------------------- */
+/* Header Styling*/
+
+.headerImage{
+  background-size: contain;
+	height: 370px;
+  width: 85%;
+  background-repeat:no-repeat;
+  background-size: cover;
+  margin-left: 6%;
+  padding-left: 3%;
+  padding-top: 20px;
+  background: linear-gradient(to right top, rgba(0, 44, 77, 0.8) 0%, rgb(2,37,64, 0) 100%), url('https://remezcla.com/wp-content/uploads/2017/10/Coco-59dfafd806ae6.jpg');
+    
+
+}
+  
+
+
+.headerTitle {
+	padding-top: 50px;
+	color: white;
+	font-size: 20px;
+	text-align:left;
+  font-size: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 0% ;
+}
+
+
+.search{
+display: flex;
+}
+.form {
+  margin-top: 30px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.searchField {
+  background-color: white;
+  justify-content: center;
+  color: rgb(147, 145, 145);
+  width: 95%;
+  border-radius: 25px;
+  padding: 15px 20px;
+  padding-left: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:300;
+  border: none;
+  font-size: medium;
+
+
+  
+}
+
+.searchButton{
+  
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    position: relative;
+    padding: 15px 26px;
+    border-radius: 25px;
+    border: none;
+    background: rgb(149,209,178);
+    background: linear-gradient(90deg, rgba(149,209,178,1) 0%, rgba(38,178,182,1) 42%);
+    color: white;
+    right: 91px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+
+}
+
+.searchButton:hover{
+  background: linear-gradient(90deg, rgb(126, 190, 157) 0%, rgb(37, 164, 168) 42%);
+
+}
+
+/* -------------------------------------- */
+/* Footer Styling  */
+
+footer{
+   /* position: fixed; */
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   background-color: rgb(	3, 37, 65);
+   height: 180px;
+   display: flex;
+   justify-content: center;
+  }
+  
+
+.bottomLogo{
+  width: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* -------------------------------------- */
+/* Movies Row Header Styling */
+
+.rowHeader{
+
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+}
+.title{
+  display: flex;
+  margin-right:50px;
+  margin-left: 25px;
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.timeContainer {
+  margin-left: 20px;
+  padding: 3%;
+  display:flex;
+}
+
+.toggle{
+  border-radius: 30px;
+  border: 1px solid black;
+  padding:0;
+  width: 190px;
+
+  
+}
+.todayButton{
+  float: left;
+  border-radius: 30px;
+  border: 0 solid black;
+  padding:2px;
+  width: 80px;
+  height: 30px;
+  margin-right: 0;
+  margin-left: 0;
+  /* background-color: rgb(	3, 37, 65); */
+  /* color: rgb(126, 190, 157); */
+  cursor: pointer;
+}
+
+  .weekButton{
+    float: left;
+  border-radius: 30px;
+  border: 0 solid black;
+  padding:2px;
+  width: 110px;
+  height: 30px;
+  cursor: pointer;
+  /* background-color: white; */
+
+
+  }
+
+.leftSpan{
+  margin-right: 50px;
+  margin-left: 20px;
+  
+}
+
+.rightSpan{
+  margin-left: 1px;
+}
+
+
+/* -------------------------------------- */
+/* Movies Card Styling */
+
+  .mainDiv{
+    margin-left: 8%;
+    margin-right: 8%;
+
+    transition: 0.3s;
+    display: flex;
+    overflow-x:scroll ;
+    cursor: pointer;
+  
+  }
+
+  .postContainer {
+    width: 100%px;
+    border-radius: 15px;
+    margin-top: 1px;
+    margin-bottom: 3%;
+    margin-right: 20px;
+
+  }
+
+  .posterImage{
+      height: 230px;
+    border-radius: 15px;
+  }
+
+  .movieDescreption {
+    margin-top: 0;
+    line-height: 1;
+    padding: 2px 16px;
+    width: 70%;
+  }
+
+  .movieTitle{
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+
+  .movieTitle:hover {
+    color: rgb(51, 146, 224);
+    cursor: pointer;
+  }
+
+  .pubDate{
+    margin-top: 5px;
+    color: rgb(154, 150, 150);
+    font-size: 15px;
+    font-family:Arial, sans-serif;
+
+  }
+
+  .addToWatchList{
+    border: none;
+    font-size: 12px;
+    text-align: start;
+    height: 25px;
+    background: linear-gradient(90deg, rgba(149,209,178,1) 0%, rgba(38,178,182,1) 42%);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+    border-radius: 8px;
+
+
+  }
+    .addToWatchList:hover{
+      background: linear-gradient(90deg, rgb(126, 190, 157) 0%, rgb(37, 164, 168) 42%);
+
+    }
+
+  
+/* .circularProgressBar{
+  width: 30px;
+  height: 20px;
+  margin-top: 0;
+} */
+
+
+
+/*---------------------------------------------- */
+/* SearchBar Component */
+
+.searchBar{
+  height: 47px;
+  width: 100%;
+  display: block;
+  border-bottom: 0.8px solid rgb(215, 212, 212);
+  align-items: center;
+  justify-content: center;
+  /* display: flex; */
+}
+
+.searchBarInput {
+width: 80%;
+height: 37px;
+padding-left: 30px;
+margin-left: 40px;
+margin-top: 3px;
+border: none;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 15px; 
+outline: none;
+color: rgb(181, 181, 181);
+
+}
+
+::placeholder{
+  color: rgb(181, 181, 181);
+  opacity: 1;
+  ;
+}
+
+.moviePostContainer {
+  height: 200px;
+  width: 60%;
+  display: flex;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  margin-left: 2%;
+  border-radius: 7px;
+  box-shadow: 0 4px 8px 0 rgba(213, 210, 210, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.moviePoster{
+  width: 15%;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+
+}
+
+.movieDescieption{
+width: 70%;
+margin-left: 2%;
+padding: 5px;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-size: 14px;
+
+}
+
+.releaseDate{
+  color: rgb(147, 145, 145);
+  line-height: 0;
+}
+
+.movieOverview{
+  color: rgb(90, 89, 89);
+  overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 4; /* number of lines to show */
+   -webkit-box-orient: vertical;
+
+}
+
+/* -------------------------------------- */
+/* MovieDetails Component */
+
+.mainMovieDetailsContainer{
+  margin-top: 3%;
+  height: 500px;
+  width: 100%;
+  background:  linear-gradient(to right, rgba(31.5, 31.5, 31.5, 1) calc((50vw - 170px) - 340px), rgba(31.5, 31.5, 31.5, 0.84) 50%, rgba(31.5, 31.5, 31.5, 0.84) 100%), url('https://remezcla.com/wp-content/uploads/2017/10/Coco-59dfafd806ae6.jpg');
+
+}
+
+.rowMovieDetails {
+  width: 100%;
+  height: 450px;
+  display:flex;
+  margin-left: 7%;
+  align-items: center;
+  }
+
+.moviePosterImg{
+  height: 95%;
+  width: 300px;
+  border-radius: 12px;
+ margin-right: 3%;
+ border:0 ;
+
+}
+.movieName{
+  font-size: 55px;
+  line-height:0.3;
+  color: white;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.movieTypeAndReleaseDate{
+display: flex;
+}
+
+.movieTypeAndReleaseDate p {
+  margin-top: 0;
+  font-size: 17px;
+  line-height: 0;
+  color: white;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.popularity{
+  height: 60px;
+  width: 60px ;
+  color: white;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(	3, 37, 65);
+  border-radius: 100%;
+  margin-top: 16px;
+  margin-bottom: 25px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: 4px solid rgb(33, 175, 114);
+}
+
+
+.movieOverviewTitle{
+  line-height: 0;
+  margin-top: 25px;
+  color: white;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+}
+
+.tagline{
+  font-style: italic;
+  color: rgb(194, 193, 193);
+  font-size: 18px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.movieOverviewDescription{
+  color: rgb(209, 207, 207);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 80%;
+
+}
+
+/*-----------------------------------*/ 
+/* Movie Cast Styling */
+
+.mainMovieCastContianer{
+  margin-left: 8%;
+  margin-right: 8%;
+  transition: 0.3s;
+  display: flex;
+  overflow-x:scroll ;
+}
+
