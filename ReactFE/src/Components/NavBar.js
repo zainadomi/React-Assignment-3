@@ -30,6 +30,11 @@ export function NavBar (){
                                 navigate('watchList')
                                }}>Watchlist</button>
                             </li>
+                            <li>
+                               <button className="logout" onClick={()=>{
+                                navigate('watchList')
+                               }}>logout</button>
+                            </li>
 
                         </ul>
                     </div>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavBar } from "./NavBar";
 import SearchBar from "./SerachBar";
-// import { useState } from "react";
 
 
   

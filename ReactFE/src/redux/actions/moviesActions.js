@@ -1,4 +1,4 @@
-import { ActionTypes} from "../constants/action-types";
+import { ActionTypes } from "../constants/action-types";
 
 export const setMovies = (movies) => {
     return {
@@ -17,6 +17,13 @@ export const selectedMovie = (movie) => {
 export const movieCast = (movie) => {
     return {
         type: ActionTypes.MOVIE_CAST,
+        payload: movie,
+    };
+};
+
+export const addMovieToWatchList = movie => {
+    return {
+        type: ActionTypes.ADD_MOVIE_TO_WATCHLIST,
         payload: movie,
     };
 };

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import {setMovies} from '../redux/actions/moviesActions';
+import MoviesCard from "./MoviesCard";
 
 export function Movies() {
     const movies = useSelector((state) => state.allMovies.movies);
@@ -70,23 +70,9 @@ export function Movies() {
             </div>
         </div>
             <div className="mainDiv">
-                {movies.map(item =>
-                    <div className="postContainer" key={item.id}>
-                        <Link to={`/details/${item.id}`}>
-                            <img className="posterImage" src={`http://image.tmdb.org/t/p/w500/${item.poster_path}`} alt={item.title} />
-                        </Link>
-
-                        <div className="movieDescreption">
-                            <h4 className="movieTitle">{item.title}</h4>
-                            <p className="pubDate">{item.release_date}</p>
-                            {/* <button className="addToWatchList" onClick={() => {
-                                navigate('watchList');
-                            }} >Add to watch list</button> */}
-
-                        </div>
-                    </div>
-
-                )}
+                {movies.map((item) =>(
+                     <MoviesCard item={item} />
+                ))}
             </div>
         </>
 

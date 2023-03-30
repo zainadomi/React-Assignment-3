@@ -23,6 +23,7 @@ export const Login = (props) => {
          const data = await response.json()
 
          if(data.user){
+            localStorage.setItem('token' , data.user)
             alert('Login Successful')
             window.location.href = '/'
          }else{
@@ -30,14 +31,10 @@ export const Login = (props) => {
          }
         }
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     console.log(email);
-    // }
-
 
     return (
-        <div className="auth-form-container">
+        <div className="App">
+             <div className="auth-form-container">
             <h2>Login</h2>
 
             <form className="login-form" onSubmit={loginUser}>
@@ -52,6 +49,8 @@ export const Login = (props) => {
             </form>
             <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button>
         </div>
+        </div>
+       
 
     )
 }

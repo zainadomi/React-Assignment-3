@@ -11,9 +11,8 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 
 
-
 function App() {
-  
+
 
   const [currentForm, setCurrentForm] = useState('login');
   const [query, setQuery] = useState();
@@ -22,32 +21,21 @@ function App() {
     setCurrentForm(forName);
   }
   return (
-    <div className="App">
-      {
-        // currentForm == "login" ?<Login onFormSwitch={toggleForm}/> : <Register onFormSwitch={toggleForm}/>  
+
+    // currentForm == "login" ?<Login onFormSwitch={toggleForm}/> : <Register onFormSwitch={toggleForm}/>  
+    
+      <Provider store={store}>
         <BrowserRouter>
           <Routes>
             <Route path="/login" exact element={<Login />} />
             <Route path="/register" exact element={<Register />} />
-            <Route path="/" exact element={<Home setQuery={setQuery} />} />
+            <Route path="/" element={<Home setQuery={setQuery} />} />
+            <Route path="/search" element={<GetSearchData query={query} />} />
+            <Route path="/details/:movieId" element={<MovieDetails />} />
+            <Route path="watchList/:movieId" element={<WatchList query={query} />} />
+
           </Routes>
-
-
-        </BrowserRouter>
-      }
-    </div>
-    // <Provider store={store}>
-    //   <BrowserRouter>
-    //     <Routes>
-    //       <Route path="/" element={<Home setQuery={setQuery} />} />
-    //       <Route path="/search" element={<GetSearchData query={query} />} />
-    //       <Route path="/details/:movieId" element={<MovieDetails />} />
-    //       <Route path="watchList/:movieId" element={<WatchList query={query} />} />
-
-    //     </Routes>
-    //   </BrowserRouter></Provider>
-
-
+        </BrowserRouter></Provider>
   )
 }
 

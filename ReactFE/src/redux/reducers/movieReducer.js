@@ -2,6 +2,7 @@ import { ActionTypes } from "../constants/action-types"
 
 const initialState = {
     movies:[],
+    watchList:[],
 }
 
 export const movieReducer = (state=initialState, {type,payload})=> {
@@ -35,3 +36,12 @@ export const movieCastReducer = (state=initialState, {type,payload})=> {
             return state;   
     }
 } 
+
+export const watchListReducer = (state=initialState, {type,payload}) => {
+    switch (type) {
+        case ActionTypes.ADD_MOVIE_TO_WATCHLIST:
+            return {...state, watchList:payload};
+        default:
+            return state;
+    }
+}
