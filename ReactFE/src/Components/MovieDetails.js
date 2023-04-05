@@ -24,6 +24,7 @@ const MovieDetails = () => {
     useEffect(() => {
         getDetails()
     }, [dispatch]);
+
   
 
     return (
@@ -43,6 +44,8 @@ const MovieDetails = () => {
                         <div>
                             <h3 className="movieOverviewTitle">Overview</h3>
                             <div className="movieOverviewDescription">{movie.overview}</div>
+                            <button className="addToWatchList">ADD TO WATCHLIST</button>
+
                         </div>
                     </div>
 

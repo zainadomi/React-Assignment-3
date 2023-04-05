@@ -70,7 +70,7 @@ export function Movies() {
             </div>
         </div>
             <div className="mainDiv">
-                {movies.map((item) =>(
+                {movies.map((item   ) =>(
                      <MoviesCard item={item} />
                 ))}
             </div>

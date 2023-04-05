@@ -32,7 +32,8 @@ function App() {
             <Route path="/" element={<Home setQuery={setQuery} />} />
             <Route path="/search" element={<GetSearchData query={query} />} />
             <Route path="/details/:movieId" element={<MovieDetails />} />
-            <Route path="watchList/:movieId" element={<WatchList query={query} />} />
+            <Route path="/watchList" exact element={<WatchList />} />
+
 
           </Routes>
         </BrowserRouter></Provider>

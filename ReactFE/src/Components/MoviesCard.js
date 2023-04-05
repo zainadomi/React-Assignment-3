@@ -1,30 +1,58 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
-import {useNavigate} from 'react-router-dom'
-import {addMovieToWatchList} from "../redux/actions/moviesActions"
-import { useDispatch, useSelector } from "react-redux";
-import { watchListReducer } from '../redux/reducers/movieReducer';
+import { useNavigate } from "react-router-dom";
 
+export default function MoviesCard({ item }) {
+  const navigate = useNavigate();
 
-export default function MoviesCard({item}) {
-    const {addMovieToWatchList} = useSelector(watchListReducer);
+  // add movie to watchList function
+
+  const watchListFunction = async () => {
+    const usertoken = localStorage.getItem("token");
+
+    var myHeaders = new Headers();
+    myHeaders.append("Authorization", `Bearer ${usertoken}`);
+    myHeaders.append("Content-Type", "application/json");
+
     
-    const navigate = useNavigate();
- 
+var raw = JSON.stringify({
+    "poster_path": item.poster_path,
+    "title": item.title,
+    "release_date": item.release_date,
+    "movieId": item.id
+  });
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    fetch("http://localhost:1337/api/watchlist", requestOptions)
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.log("error", error));
+  };
+
+
   return (
     <div className="postContainer" key={item.id}>
-                        <Link to={`/details/${item.id}`}>
-                            <img className="posterImage" src={`http://image.tmdb.org/t/p/w500/${item.poster_path}`} alt={item.title} />
-                        </Link>
+      <Link to={`/details/${item.id}`}>
+        <img
+          className="posterImage"
+          src={`http://image.tmdb.org/t/p/w500/${item.poster_path}`}
+          alt={item.title}
+        />
+      </Link>
 
-                        <div className="movieDescreption">
-                            <h4 className="movieTitle">{item.title}</h4>
-                            <p className="pubDate">{item.release_date.substring(0,4)}</p>
-                            <button className="addToWatchList" onClick={() => {
-                                navigate('watchList');
-                            }} >ADD TO WATCHLIST</button>
-
-                        </div>
-                    </div>
-  )
+      <div className="movieDescreption">
+        <h4 className="movieTitle">{item.title}</h4>
+        <p className="pubDate">{item.release_date.substring(0, 4)}</p>
+        <button className="addToWatchList" onClick={watchListFunction}>
+          ADD TO WATCHLIST
+        </button>
+      </div>
+    </div>
+  );
 }

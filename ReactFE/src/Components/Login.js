@@ -21,16 +21,19 @@ export const Login = (props) => {
          })
     
          const data = await response.json()
+         console.log(data)
 
-         if(data.user){
-            localStorage.setItem('token' , data.user)
+         if(data.token){
+            localStorage.setItem('token' , data.token)
             alert('Login Successful')
+            console.log('--------------------')
+            console.log(localStorage.getItem('token'))
             window.location.href = '/'
          }else{
             alert('Please check your email and password')
+            
          }
-        }
-
+    }
 
     return (
         <div className="App">

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavBar } from "./NavBar";
 import SearchBar from "./SerachBar";
+import SearchResultsCard from "./SearchResultsCard";
 
 
   
@@ -8,6 +9,7 @@ export function GetSearchData ({query}) {
    const [movies,setMovies] = useState();
 
    useEffect(()=> {
+    if({query})return
     const getData = () => {
       var requestOptions = {
           method: 'GET',
@@ -22,21 +24,13 @@ export function GetSearchData ({query}) {
   getData();
 
    },[query])
-
   return (
     <>
     <NavBar />
     <SearchBar />
-    {movies?.map((item) =>
-                <div className='moviePostContainer' key={item.id}>
-                    <img className='moviePoster' src={`http://image.tmdb.org/t/p/w500/${item.poster_path}`} alt={item.title}></img>
-                    <div className='movieDescieption'>
-                        <h3>{item.original_title}</h3>
-                        <p className='releaseDate'>{item.release_date}</p>
-                        <p className='movieOverview'>{item.overview}</p>
-                    </div>
-                </div>
-            )}
+    {movies?.map((item) =>{
+             <SearchResultsCard item={item} />}
+    )}
     </>
   );
   

@@ -21,7 +21,7 @@ export const movieCast = (movie) => {
     };
 };
 
-export const addMovieToWatchList = movie => {
+export const addMovieToWatchList = (movie) => {
     return {
         type: ActionTypes.ADD_MOVIE_TO_WATCHLIST,
         payload: movie,

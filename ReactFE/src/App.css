@@ -588,6 +588,7 @@ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans
   color: rgb(209, 207, 207);
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   width: 80%;
+  padding-bottom: 2%;
 
 }
 
@@ -600,5 +601,15 @@ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans
   transition: 0.3s;
   display: flex;
   overflow-x:scroll ;
+}
+
+/*-----------------------------------*/ 
+/* WatchList  Styling */
+
+.watchListHeader{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 3%;
+  padding-left: 3%;
+  font-weight: 20;
 }
 
