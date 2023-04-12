@@ -70,11 +70,11 @@ export function Movies() {
             </div>
         </div>
             <div className="mainDiv">
-                {movies.map((item   ) =>(
-                     <MoviesCard item={item} />
+                {movies.map((item, index) =>(
+                     <MoviesCard item={item} key={index}  />
                 ))}
             </div>
-        </>
+        </> 
 
     );
 }

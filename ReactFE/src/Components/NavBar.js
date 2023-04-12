@@ -7,11 +7,13 @@ export function NavBar() {
 
     localStorage.clear("token")
     console.log(localStorage.getItem('token'))
-
-    // window.location.href = '/login'
+    window.location.href = '/login'
 
    }
 
+
+  
+ 
   return (
     <header className="headerContainer">
       <div className="headerContent">
