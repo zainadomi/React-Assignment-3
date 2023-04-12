@@ -109,16 +109,33 @@ app.post("/api/watchlist", verifyToken, async (req, res) => {
 
 // get all the movies in watchlist
 
-app.get('/getMovies/',async (req,res)=>{
+app.get('/getMovies',verifyToken, async (req,res)=>{
   try{
 
-    const allMovies = await Movie.find({});
+    const allMovies = await Movie.find({userId:req.userId});
     res.send({status:'ok', data: allMovies})
 
   }catch(error){
     console.log(error)
   }
-})
+});
+
+ // delete movie from watchlist
+  app.delete("/api/deleteMovie/:id", verifyToken, async (req, res) => {
+    try {
+      const { id } = req.params;
+      const movie = await Movie.findOneAndDelete({movieId:id,userId:req.userId});
+      if (movie) {
+        res.status(200).json({ msg: "deleted successfully" });
+      } else {
+        res.status(404).json({ msg: "not found" });
+      }
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ msg: "internal server error" });
+    }
+  });
+
 
   app.listen(1337, () => {
     console.log("Server  started on 1337");
